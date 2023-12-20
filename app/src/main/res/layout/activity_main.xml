@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/menu_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#95D0D7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_screen_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter a city name"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_margin="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_toolbar" />
+
+    <EditText
+        android:id="@+id/etCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="32dp"
+        android:ems="10"
+        android:hint="Enter city name"
+        android:text=""
+        android:background="@drawable/et_style"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_screen_label" />
+
+    <Button
+        android:id="@+id/btnGetWeatherReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Get Weather Report"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/btnSaveWeatherReport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCityName"
+        android:background="@drawable/btn_style2"/>
+
+    <Button
+        android:id="@+id/btnSaveWeatherReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Save Weather Report"
+        android:background="@drawable/btn_style1"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGetWeatherReport"
+        app:layout_constraintTop_toBottomOf="@id/etCityName" />
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Results go here"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetWeatherReport" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
